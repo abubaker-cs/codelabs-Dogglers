@@ -21,13 +21,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dogglers.R
 import com.example.dogglers.const.Layout
 import com.example.dogglers.data.DataSource
-import com.example.dogglers.databinding.GridListItemBinding
-import com.example.dogglers.databinding.VerticalHorizontalListItemBinding
 
 /**
  * Adapter to inflate the appropriate list item layout and populate the view with information
@@ -39,7 +36,7 @@ class DogCardAdapter(
 ) : RecyclerView.Adapter<DogCardAdapter.DogCardViewHolder>() {
 
     // TODO: Initialize the data using the List found in data/DataSource
-    val dataList = DataSource.dogs
+    val data = DataSource.dogs
 
     /**
      * Initialize view elements
@@ -82,14 +79,14 @@ class DogCardAdapter(
 
     // TODO: return the size of the data set instead of 0
     override fun getItemCount(): Int {
-        return dataList.size
+        return data.size
     }
 
     override fun onBindViewHolder(holder: DogCardAdapter.DogCardViewHolder, position: Int) {
 
         // 01
         // TODO: Get the data at the current position
-        val currentRecord = dataList[position]
+        val currentRecord = data[position]
 
         // 02
         // TODO: Set the image resource for the current dog
