@@ -45,16 +45,19 @@ class MainActivity : AppCompatActivity() {
         binding.gridBtn.setOnClickListener { launchGrid() }
     }
 
+    // List Display Mode: Vertical
     private fun launchVertical() {
         listIntent = Intent(this, VerticalListActivity::class.java)
         startActivity(listIntent)
     }
 
+    // List Display Mode: Horizontal
     private fun launchHorizontal() {
         listIntent = Intent(this, HorizontalListActivity::class.java)
         startActivity(listIntent)
     }
 
+    // List Display Mode: Grid
     private fun launchGrid() {
         listIntent = Intent(this, GridListActivity::class.java)
         startActivity(listIntent)
